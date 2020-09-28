@@ -1,0 +1,97 @@
+.main-container  {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+   
+    
+}
+.main-container header {
+    display: flex;
+     align-items: center; 
+}
+.main-container header img {
+    width: 130px;
+    height: 100px; 
+}
+.main-container header h3 {
+   margin-left: 20px;
+}
+.main-container header .main-btn {
+   margin-left: auto;
+   background: #440297;
+   padding: 10px;
+   color: #fff;
+   font-weight: bold;
+   font-size: 15px;
+   border-radius: 5px;
+   
+}
+
+.main-container header .img-main {
+    height: 55px;
+}
+
+header .main-btn:hover {
+    background: #5b04c7;
+}
+
+.main-container header .power {
+   margin-left: 10px;  
+   padding: 3px; 
+   width: 35px;
+   height: 35px;
+   border: 0;
+   border-radius: 5px; 
+   cursor: pointer;
+}
+
+.main-container header .power:hover {
+    color: #a8616d;
+    border: 1px solid #c5c5c5;
+}
+
+.main-container h2 {
+    margin-top: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.main-container ul {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+    
+}
+.main-container ul li {
+    background: #fff;
+    list-style: none;
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    
+}
+.main-container ul li button {
+   position: absolute; 
+   right: 24px;
+   top: 24px;
+   border: 0;
+   background: #fff; 
+   cursor: pointer;
+   padding: 5px;
+}
+
+.main-container ul li button:hover {
+    color: #a8616d;
+    border: 1px solid #efefef;    
+}
+
+.main-container ul li p {
+   margin-bottom: 15px;
+   font-size: 15px;
+   color: #5c5b5b; 
+}
+
+
+
+

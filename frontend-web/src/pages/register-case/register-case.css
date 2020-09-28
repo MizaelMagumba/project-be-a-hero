@@ -1,0 +1,96 @@
+.register-case-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    display: flex;
+     
+    justify-content: center; 
+     
+}
+.register-case-container .register-case-section {
+    width: 750px;
+   margin-top: 60px;
+   box-shadow: 0 0 100px rgb(0, 0, 0, 0.3);
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 30px;
+   padding: 30px;
+}
+
+.register-case-container .register-case-section h2 {
+    margin-top: 30px;
+    color: #615e5e; 
+}
+
+.register-case-container .register-case-section p{
+    font-size: 19px;
+    margin-top: 30px;
+}
+
+.voltar-home {
+    margin-top: 50px;
+}
+
+.arrow-left{
+    margin-right: 12px;
+}
+
+
+
+.register-case-container .register-case-section form .new-case-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 9px;
+    outline: none;
+    font-size: 15px;
+    border: 0;
+    border-radius: 5px;
+    border: 1px solid #acacac;
+}
+
+
+form textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+
+.register-case-container .register-case-section form .new-case-btn {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+}
+
+.btn-cancel {
+    padding: 12px;
+    background: #fff;
+    font-weight: bold;
+    border: 0;
+    border: 1px solid #acacac;
+    border-radius: 5px;
+}
+.btn-cancel:hover {
+    cursor: pointer;
+    background: #efefef;
+}
+
+.btn-cadastrar {
+    padding: 12px;
+    background: #440297;
+    font-weight: bold;
+    color: #fff;
+    border: 0;
+    border: 1px solid #acacac;
+    border-radius: 5px;
+}
+
+.btn-cadastrar:hover {
+    cursor: pointer;
+    background: #5b04c7;
+}
+
+.register-img-logo {
+    width: 200px;
+     
+}
+

@@ -1,0 +1,88 @@
+.register-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-session {
+    width: 700px;
+    box-shadow: 0 0 100px rgb(0, 0, 0, 0.4) ;
+    margin-top: 120px;
+    display: flex;
+    gap: 50px;
+    padding: 50px;
+    border-radius: 8px;
+    border: 1px solid #c9c9c9;
+}
+
+.register-content .img-register {
+    height: 80px;
+     
+    
+}
+
+.register-container .register-session img {
+    margin-bottom: 30px;
+}
+.register-container .register-session h1 {
+    margin-bottom: 10px;
+    color: #555454;
+    font-weight: bold;
+}
+.register-container .register-session p {
+    margin-bottom: 30px;
+    text-align: justify;
+    color: #868585;
+}
+ 
+.register-input {
+   width: 100%;
+   margin-top: 9px;
+     
+
+    font-size: 17px; 
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+    padding: 10px;
+    
+    outline: none; 
+}
+
+.register-input:focus {
+    background: #ebf6f8;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group .register-input + .register-input {
+    width: 150px;
+}
+
+form .register-btn  {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+    width: 100%; 
+    border: 0; 
+    cursor: pointer;
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    
+    
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: #440297; 
+    color: #fff;
+}
+
+form .register-btn:hover {
+    background: #5b04c7;
+}
