@@ -6,9 +6,9 @@ exports.up = function(knex) {
       table.string('title').notNullable();
       table.string('description').notNullable();
       table.decimal('value').notNullable();
-      table.string('name').notNullable();
-      table.integer('size').notNullable();
-      table.string('filename').notNullable();
+      table.string('name');
+      table.integer('size');
+      table.string('filename');
 
       table.string('companies_id')
         .notNullable()
