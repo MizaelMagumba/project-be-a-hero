@@ -5,15 +5,15 @@ module.exports = {
 
         const {id} = request.body;
 
-        const ongName = await dataBaseTable('ongs').where('id', id)
+        const companyName = await dataBaseTable('companies').where('id', id)
                         .select('name')
                         .first();
         
-        if(!ongName) {
+        if(!companyName) {
             return response.status(401).json({error: 'ID nao encontrado!'});
         };
 
-        return response.json(ongName);
+        return response.json(companyName);
 
     },
 }

@@ -4,16 +4,16 @@ const crypto = require('crypto');
 module.exports = {
 
     async index(req, res) {
-        const ongs = await dataBaseTable('ongs').select('*');
+        const companies = await dataBaseTable('companies').select('*');
 
-        return res.json(ongs);
+        return res.json(companies);
     },
 
     async create(req, res) {
         const { name, email, whatsapp, provincia, cidade} = req.body;
         const id = crypto.randomBytes(4).toString('hex');
 
-        await dataBaseTable('ongs').insert({
+        await dataBaseTable('companies').insert({
             id,
             name,
             whatsapp,
