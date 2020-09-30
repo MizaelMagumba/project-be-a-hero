@@ -1,5 +1,6 @@
 const dataBaseTable = require('../database/conection');
 
+
 module.exports = {
 
     async index(req, res) {
@@ -8,15 +9,15 @@ module.exports = {
         const [count] = await dataBaseTable('cases').count();
 
         const casos = await dataBaseTable('cases')
-        .join('ongs', 'ongs.id', '=', 'cases.ongs_id')
+        .join('companies', 'companies.id', '=', 'cases.companies_id')
         .limit(5)
         .offset((page - 1) * 5)
         .select(['cases.*', 
-                'ongs.name', 
-                'ongs.email', 
-                'ongs.whatsapp', 
-                'ongs.provincia', 
-                'ongs.cidade'
+                'companies.name', 
+                'companies.email', 
+                'companies.whatsapp', 
+                'companies.provincia', 
+                'companies.cidade'
         ]);
 
         res.header('X-Total-Count', count['count(*)']);
@@ -27,12 +28,12 @@ module.exports = {
     async create(req, res) {
         const {title, description, value} = req.body;
         
-        const ongs_id = req.headers.ong_id;
+        const companies_id = req.headers.company_id;
 
         const [id] = await dataBaseTable('cases').insert({
             title,
             description,
-            ongs_id,
+            companies_id,
             value,
         });
         
@@ -42,13 +43,13 @@ module.exports = {
     async delete(req, res) {
 
         const {id} = req.params;
-        const ongs_id = req.headers.ong_id;
+        const companies_id = req.headers.company_id;
 
         const caso = await dataBaseTable('cases').where('id', id)
-            .select('ongs_id')
+            .select('companies_id')
             .first();
 
-        if(caso.ongs_id !== ongs_id) { 
+        if(caso.companies_id !== companies_id) { 
             return res.status(401).json({error: 'Operacao nao permitida.'});
         };
 
@@ -56,5 +57,24 @@ module.exports = {
 
         return res.status(200).send();
 
-    }
+    },
+
+    async upload(req, res) {
+
+         
+        const {id} = req.params;
+        const company_id = req.headers.company_id;
+
+        const caso =  await dataBaseTable('cases').where('id', id)
+                            .select('companies_id').first();
+
+        if (caso.companies_id !== company_id) {
+            return res.status(401).json({error: 'Operacao nao permitida'});
+        }
+
+        await dataBaseTable('cases').where('id', id).update('filename', req.file.filename);
+        return res.status(200).send();
+    },
+
+    
 }
